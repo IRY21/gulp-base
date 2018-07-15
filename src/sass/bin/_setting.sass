@@ -15,10 +15,22 @@ body
 
 .Container
   width: 100%
-  max-width: 1150px
-  padding-right: 15px
-  padding-left: 15px
+  max-width: 1440px
+  padding-right: 30px
+  padding-left: 30px
   margin-right: auto
   margin-left: auto
-  box-sizing: border-box
-
+  +r(sl)
+    max-width: 1920px
+    padding-right: 40px
+    padding-left: 40px
+  +r(sm)
+    width: 960px
+    max-width: none
+    padding-right: 20px
+    padding-left: 20px
+  +r(xs)
+    width: 720px
+    max-width: none
+    padding-right: 15px
+    padding-left: 15px

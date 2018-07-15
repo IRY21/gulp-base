@@ -24,7 +24,7 @@ $phone = "8 (962) 520-63-78";
     <meta name="description" content="">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=720, minimum-scale=0.33, maximum-scale=1.25">
 
     <link rel="shortcut icon" href="/img/favicon/favicon.ico" type="image/x-icon">
 

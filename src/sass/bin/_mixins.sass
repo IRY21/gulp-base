@@ -1,11 +1,7 @@
 @mixin r($class)
-  @if $class == xxs
-    @media (max-width: 481px) { @content; }
-  @else if $class == xs
-    @media (max-width: 575px) { @content; }
+  @if $class == xs
+    @media (max-width: 960px) { @content; }
   @else if $class == sm
-    @media (max-width: 767px) { @content; }
-  @else if $class == lg
-    @media (max-width: 991px) { @content; }
+    @media (min-width: 961px) and (max-width: 1440px) { @content; }
   @else if $class == sl
-    @media (max-width: 1200px) { @content; }
+    @media (min-width: 1921px) and (max-width: 4096px) { @content; }
