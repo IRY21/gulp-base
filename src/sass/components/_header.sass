@@ -2,10 +2,6 @@
   width: 100%
   padding: 11px 0 9px
   background-color: #ffffff
-  position: absolute
-  top: 0
-  left: 0
-  z-index: 100
   +r(xs)
     padding: 11px 0
     position: fixed
@@ -17,18 +13,6 @@
     align-items: center
     justify-content: space-between
   &-Logo
-
-.Logo
-    &-Link
-      display: block
-    &-Image
-      max-width: 100%
-      display: block
-
-.DefmenuBtn
-  display: none
-  +r(xs)
-    display: flex
 
 .HeaderInfo
   display: flex
@@ -57,11 +41,8 @@
     +r(xs)
       display: block
 
-.HeaderLogin
-  font-size: 16px
-  font-weight: 300
-  color: $main-color
-  line-height: 1
+.DefmenuBtn
+  display: none
   +r(xs)
-    display: none
+    display: flex
 

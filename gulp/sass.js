@@ -32,5 +32,5 @@ gulp.task('sass', function () {
 });
 
 gulp.task('sass:watch', function () {
-    gulp.watch('src/sass/**/*.*', ['sass', 'bs-reload']);
+    gulp.watch(['src/sass/**/*.*', 'src/common.blocks/**/*.*', 'src/project.blocks/**/*.*'], ['sass', 'bs-reload']);
 });
