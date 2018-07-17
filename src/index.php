@@ -98,7 +98,7 @@
             <input name="page_id" type="hidden" value="<?=$page_id;?>">
         </form>
 
-        <form class="Form" id="form" data-reachgoal="main-form">
+        <form class="Form" id="form2" data-reachgoal="main-form">
             <div class="Form-Controls">
                 <div class="Form-Row">
                     <label class="Input Input_theme_line ContactForm-Input">
@@ -107,6 +107,16 @@
                                 placeholder="Введите ваше имя"
                                 name="name"
                                 class="Input-Control ContactForm-InputControl"
+                                data-validator="number"
+                        />
+                    </label>
+                    <label class="Input Input_theme_line ContactForm-Input">
+                        <span class="Label ContactForm-Label">Имя:</span>
+                        <input
+                                placeholder="Введите ваше имя"
+                                name="name"
+                                class="Input-Control ContactForm-InputControl"
+                                data-validator="letters"
                         />
                     </label>
                 </div>
@@ -129,6 +139,9 @@
                     <textarea cols="60" rows="3" id="textarea"
                               class="Textarea Form-Textarea"
                               name="textarea"
+                              data-validator="length"
+                              data-validator-min="0"
+                              data-validator-max="10"
                     ></textarea>
                 </div>
                 <div class="Form-Row">
@@ -172,6 +185,15 @@
         <button class="Btn FancyBtn fancybox.ajax"  href="/im-blocks/imassage.php?headmess=<?=urlencode("Главная форма");?>&zag1=<?=urlencode("Заявка на консультацию менеджера");?>&zag2=<?=urlencode("Перезвоним в течение 5 минут");?>&reachgoal=main_form&btn_text=<?=urlencode('Получить консультацию');?>&page_id=<?=urlencode($page_id);?>">
             Получить промо-код
         </button>
+
+        <div class="Accordion">
+            <div class="Accordion-Item">
+                <div class="Accordion-Title">Тепловизионное обследование</div>
+                <div class="Accordion-Content">
+                    text
+                </div>
+            </div>
+        </div>
 
         @@include('template/all/footer.php')
     </div>
