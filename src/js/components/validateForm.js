@@ -25,8 +25,9 @@ function validateForm(options) {
         var value = elem.value;
 
         switch (elem.dataset.validator) {
-            case 'empty':
-                if (value == '') elem.classList.add(inputErrorClass);
+            case 'length':
+                value = value.length;
+                lenghtCheck(elem, value);
 
                 requiredValid(elem);
 
@@ -39,24 +40,13 @@ function validateForm(options) {
 
                 break;
             case 'number':
-                var min, max;
                 if (isNaN(Number(value))) {
                     elem.classList.add(inputErrorClass);
                     return;
                 }
 
-                if (elem.dataset.validatorMin) {
-                    min = parseInt(elem.dataset.validatorMin);
-                }
-                if (elem.dataset.validatorMax) {
-                    max = parseInt(elem.dataset.validatorMax);
-                }
-
                 value = parseInt(value);
-
-                if (min > value || value > max) {
-                    elem.classList.add(inputErrorClass);
-                }
+                lenghtCheck(elem, value);
 
                 requiredValid(elem);
 
@@ -71,8 +61,22 @@ function validateForm(options) {
         }
     }
 
+    function lenghtCheck(elem, value) {
+        var min, max;
+        if (elem.dataset.validatorMin) {
+            min = parseInt(elem.dataset.validatorMin);
+        }
+        if (elem.dataset.validatorMax) {
+            max = parseInt(elem.dataset.validatorMax);
+        }
+
+        if (min > value || value > max) {
+            elem.classList.add(inputErrorClass);
+        }
+    }
+
     function checkForm() {
-        var inputList = form.querySelectorAll('input, select, textarea');
+        var inputList = form.querySelectorAll('input');
 
         for (var i = 0; i < inputList.length; i++) {
             validElem(inputList[i]);
