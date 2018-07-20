@@ -17,9 +17,7 @@ $(document).ready(function(){
         if(e.keyCode==13)
         {
             e.preventDefault();
-            var qid = $(this).parents('form').attr('alt');
-            var qreachgoal = $(this).parents('form').attr('data-reachgoal');
-            formcheck(qid, qreachgoal);
+            $(this).parents('form').children('.Btn').click();
         }
     });
 
