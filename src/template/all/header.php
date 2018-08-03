@@ -17,7 +17,7 @@
             <div class="Header-Info HeaderInfo">
                 <a href="tel:<?=preg_replace("/[^0-9]/", '', $phone);?>" class="HeaderInfo-Phone HeaderPhone">
                     <span class="HeaderPhone-Number"><?=$phone?></span>
-                    <img src="/img/HeaderPhone-Img.png" alt="" class="HeaderPhone-Img">
+                    <img src="/img/HeaderPhone-Img.svg" alt="" class="HeaderPhone-Img">
                 </a>
                 <a href="#" class="HeaderInfo-Text">Войти как арендодатель</a>
             </div>

@@ -84,6 +84,7 @@ function validateForm(options) {
             if (inputList[i].classList.contains(inputErrorClass)) {
                 form.classList.remove(formValidClass);
                 form.classList.add(formInvalidClass);
+                inputList[i].focus();
                 return false;
             }
             form.classList.remove(formInvalidClass);
