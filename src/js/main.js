@@ -7,7 +7,7 @@ $(document).ready(function(){
 
     var phonemaskOk = 0;
 
-    $(".MaskedPhone").inputmask("+7 (999) 999-99-99",{
+    $(".MaskedPhone").inputmask("8 (999) 999-99-99",{
         "oncomplete": function(){ phonemaskOk = 1; },
         "onincomplete": function(){ phonemaskOk = 0; },
         "oncleared": function(){ phonemaskOk = 0; }
