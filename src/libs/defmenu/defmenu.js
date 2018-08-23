@@ -90,7 +90,7 @@ DefMenu.prototype._createLinks =  function (createState) {
             var anchor, text, li, a, navElems;
             for (var i = 0; i < anchorBlocks.length; i++){
                 anchor = anchorBlocks[i].getAttribute("id");
-                text = anchorBlocks[i].getAttribute("DataDefanchor");
+                text = anchorBlocks[i].getAttribute("data-defanchor");
                 li = document.createElement("li");
                 a = document.createElement("a");
                 a.className = "DefmenuNav-Link";

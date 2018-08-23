@@ -16,7 +16,7 @@ function validateForm(options) {
 
     function requiredValid(elem) {
         if (elem.value == '' && elem.hasAttribute('data-required')) {
-            elem.classList.add(inputErrorClass);
+            errorInput(elem);
         }
     }
 
@@ -34,14 +34,14 @@ function validateForm(options) {
                 break;
             case 'letters':
                 regExp = /^([a-zа-яё]*)$/i;
-                if (!regExp.test(value)) elem.classList.add(inputErrorClass);
+                if (!regExp.test(value)) errorInput(elem);
 
                 requiredValid(elem);
 
                 break;
             case 'number':
                 if (isNaN(Number(value))) {
-                    elem.classList.add(inputErrorClass);
+                    errorInput(elem);
                     return;
                 }
 
@@ -53,7 +53,7 @@ function validateForm(options) {
                 break;
             case 'regexp':
                 regExp = new RegExp(elem.dataset.validatorPattern);
-                if (!regExp.test(value) && value != '') elem.classList.add(inputErrorClass);
+                if (!regExp.test(value) && value != '') errorInput(elem);
 
                 requiredValid(elem);
 
@@ -71,8 +71,15 @@ function validateForm(options) {
         }
 
         if (min > value || value > max) {
-            elem.classList.add(inputErrorClass);
+            errorInput(elem);
         }
+    }
+
+    function errorInput(elem) {
+        elem.classList.add(inputErrorClass);
+        setTimeout(function () {
+            elem.classList.remove(inputErrorClass);
+        }, 500)
     }
 
     function checkForm() {
@@ -99,7 +106,7 @@ function validateForm(options) {
 
     form.addEventListener('focus', function (event) {
         if (event.target.classList.contains(inputErrorClass)) {
-            event.target.classList.remove(inputErrorClass);
+            errorInput(elem);
         }
     }, true);
 

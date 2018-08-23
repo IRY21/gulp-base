@@ -59,6 +59,16 @@ $(document).ready(function(){
         $(this).parent().toggleClass('Accordion-Item_open');
     });
 
+    function animatedAnchorScroll(self) {
+        var target = $(self).attr('href');
+        $('html, body').animate({ scrollTop: $(target).offset().top-80}, 500);
+    }
+    $('a[href^="#"]').click(function () {
+        animatedAnchorScroll(this);
+        myDefMenu.close();
+        return false;
+    });
+
     validateForm({
         formId: 'form1'
         //formValidClass: 'Form_valid',
