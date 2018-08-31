@@ -10,6 +10,12 @@
  */
 function validateForm(options) {
     var form = document.getElementById(options.formId);
+
+    if(!form) {
+        console.error("Cannot find form with id: "+ options.formId);
+        return;
+    }
+
     var formValidClass = options.formValidClass || 'Form_valid';
     var formInvalidClass = options.formInvalidClass || 'Form_invalid';
     var inputErrorClass = options.inputErrorClass || 'Input_error';
@@ -83,21 +89,25 @@ function validateForm(options) {
     }
 
     function checkForm() {
-        var inputList = form.querySelectorAll('input');
+        try {
+            var inputList = form.querySelectorAll('input');
 
-        for (var i = 0; i < inputList.length; i++) {
-            validElem(inputList[i]);
+            for (var i = 0; i < inputList.length; i++) {
+                validElem(inputList[i]);
 
-            if (inputList[i].classList.contains(inputErrorClass)) {
-                form.classList.remove(formValidClass);
-                form.classList.add(formInvalidClass);
-                inputList[i].focus();
-                return false;
+                if (inputList[i].classList.contains(inputErrorClass)) {
+                    form.classList.remove(formValidClass);
+                    form.classList.add(formInvalidClass);
+                    inputList[i].focus();
+                    return false;
+                }
+                form.classList.remove(formInvalidClass);
+                form.classList.add(formValidClass);
             }
-            form.classList.remove(formInvalidClass);
-            form.classList.add(formValidClass);
+            return true;
+        } catch (e) {
+            console.log(e);
         }
-        return true;
     }
 
     form.addEventListener('blur', function (event) {
