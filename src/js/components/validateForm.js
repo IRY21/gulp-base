@@ -64,6 +64,22 @@ function validateForm(options) {
                 requiredValid(elem);
 
                 break;
+            case 'file':
+                if(elem.value === '') {
+                    if(!elem.parentNode.querySelector('.FileErrorText')) {
+                        var para = document.createElement('p');
+                        para.classList.add('FileErrorText');
+                        para.textContent = 'Нет прикрепленного файла';
+                        setTimeout(function () {
+                            elem.parentNode.removeChild(para);
+                        }, 1000);
+                        elem.parentNode.insertBefore(para, elem);
+                    }
+                }
+
+                requiredValid(elem);
+
+                break;
         }
     }
 
