@@ -73,7 +73,7 @@ $phone = "8 (800) 222-22-22";
 
         <div id="" data-defanchor=""></div>
 
-        <form class="Form Form_theme_line" id="form1" data-reachgoal="main-form">
+        <!--<form class="Form Form_theme_line" id="form1" data-reachgoal="main-form">
             <div class="Input Input_bgWhite">
                 <input
                         type="tel"
@@ -89,7 +89,7 @@ $phone = "8 (800) 222-22-22";
                 Получить бесплатный аудит
             </button>
             <input name="head_mess" type="hidden" value="Главная форма">
-            <input name="page_id" type="hidden" value="<?=$page_id;?>">
+            <input name="page_id" type="hidden" value="<?/*=$page_id;*/?>">
         </form>
 
         <form class="Form" id="form10" data-reachgoal="test">
@@ -119,12 +119,12 @@ $phone = "8 (800) 222-22-22";
             </div>
             <div class="Form-Row">
                 <input name="head_mess" type="hidden" value="">
-                <input name="page_id" type="hidden" value="<?=$page_id;?>">
+                <input name="page_id" type="hidden" value="<?/*=$page_id;*/?>">
                 <button class="contact-form__btn form-section__btn Btn">
                     Test
                 </button>
             </div>
-        </form>
+        </form>-->
 
         <button class="Btn FancyBtn fancybox.ajax"  href="/im-blocks/imassage.php?headmess=<?=urlencode("Главная форма");?>&zag1=<?=urlencode("Заявка на консультацию менеджера");?>&zag2=<?=urlencode("Перезвоним в течение 5 минут");?>&reachgoal=main_form&btn_text=<?=urlencode('Получить консультацию');?>&page_id=<?=urlencode($page_id);?>">
 
@@ -329,3 +329,5 @@ $phone = "8 (800) 222-22-22";
 
     </div>
 </main>
+
+@@include('template/all/footer.php')

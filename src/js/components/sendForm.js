@@ -4,7 +4,9 @@ function sendForm(form) {
     var formData = new FormData(form);
 
     var formBtn = form.querySelector('.Btn');
+    formBtn.classList.add('Btn_disabled');
     formBtn.disabled = true;
+
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "/ok.php");
     xhr.send(formData);
@@ -17,6 +19,8 @@ function sendForm(form) {
             //yaCounter33093903.reachGoal(reachgoal);
             parent.$.fancybox.close();
             jQuery.fancybox( jQuery('.ImThanks').html(xhr.responseText) );
+
+            formBtn.classList.remove('Btn_disabled');
             formBtn.disabled = false;
         }
 
