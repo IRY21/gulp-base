@@ -180,6 +180,13 @@ $phone = "8 (800) 222-22-22";
             </div>
             <div class="Form-Row">
                 <input
+                    name="name"
+                    class="Input"
+                    data-required
+                />
+            </div>
+            <div class="Form-Row">
+                <input
                     type="tel"
                     name="phone"
                     class="Input masked-phone"
