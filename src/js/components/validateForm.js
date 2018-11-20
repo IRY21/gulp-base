@@ -39,7 +39,7 @@ function validateForm(options) {
 
                 break;
             case 'letters':
-                regExp = /^[^\s]([a-zа-яё\s]*)$/i;
+                regExp = /^[^\s]([a-zа-яё\s\-]*)$/i;
                 if (!regExp.test(value)) errorInput(elem);
 
                 requiredValid(elem);

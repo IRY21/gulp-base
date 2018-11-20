@@ -20,7 +20,7 @@
                         type="tel"
                         placeholder="Введите телефон"
                         name="phone"
-                        class="Input-Control MaskedPhone"
+                        class="Input-Control MaskedPhone1"
                         data-validator="regexp"
                         data-validator-pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
                         data-required
@@ -30,7 +30,7 @@
         <div class="Form-Row">
             <input name="head_mess" type="hidden" value="<?=$_GET['headmess'];?>">
             <input name="page_id" type="hidden" value="<?=$_GET['page_id'];?>">
-            <button class="contact-form__btn form-section__btn Btn">
+            <button class="Btn Form-Btn">
                 <?=$_GET['btn_text'];?>
             </button>
         </div>

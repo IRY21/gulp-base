@@ -58,9 +58,9 @@ if(count($_POST))
 	
 	
 	if($head_mess=='Калькулятор')
-		$body_form = "<b>Форма: </b>".$head_mess."<br><b>Имя: </b> ".$name." <br><b>Телефон</b>: ".$phone." <br><b>Email</b>: ".$email;
+        $body_form = "<b>Utm_source: </b>".$utm_source."<b>utm_term: </b>".$utm_term."<b>Форма: </b>".$head_mess."<br><b>Имя: </b> ".$name." <br><b>Телефон</b>: ".$phone;
 	else
-		$body_form = "<b>Форма: </b>".$head_mess."<br><b>Имя: </b> ".$name." <br><b>Телефон</b>: ".$phone." <br><b>Email</b>: ".$email;
+        $body_form = "<b>Utm_source: </b>".$utm_source."<b>utm_term: </b>".$utm_term."<b>Форма: </b>".$head_mess."<br><b>Имя: </b> ".$name." <br><b>Телефон</b>: ".$phone;
 	
 	
 	/* отправка на почту */
