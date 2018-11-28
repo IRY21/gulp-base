@@ -28,7 +28,10 @@ $phone = "8 (962) 520-63-78";
 
     <link rel="shortcut icon" href="/img/favicon/favicon.ico" type="image/x-icon">
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <script src="/js/async-font.js"></script>
+    <script>
+        loadFont('Muller', '/css/main.css');
+    </script>
     <link rel="stylesheet" href="/css/libs.min.css">
     <link rel="stylesheet" href="/css/main.css">
 </head>

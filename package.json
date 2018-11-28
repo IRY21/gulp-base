@@ -11,7 +11,8 @@
       "sass": "src/sass/main.sass",
       "html": "src/",
       "js": "src/js/main.js",
-      "fonts": "src/fonts/**/*.*",
+      "fonts": "src/font/**/*.*",
+      "asyncFonts": "src/js/async-font.js",
       "img": {
         "compress": [
           "src/img/**/*.*",
@@ -26,7 +27,7 @@
       "css": "dist/css",
       "html": "dist",
       "js": "dist/js",
-      "fonts": "dist/fonts",
+      "fonts": "dist/font",
       "libs": "dist/libs",
       "img": "dist/img"
     },

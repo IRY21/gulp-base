@@ -94,7 +94,12 @@ DefMenu.prototype._createLinks =  function (createState) {
                 li = document.createElement("li");
                 a = document.createElement("a");
                 a.className = "DefmenuNav-Link";
-                a.href = "#" + anchor;
+
+                if (anchor.indexOf('/') === 0) {
+                    a.href = anchor;
+                } else {
+                    a.href = "#" + anchor;
+                }
                 a.innerHTML = text;
                 li.appendChild(a);
                 parent.appendChild(li);
