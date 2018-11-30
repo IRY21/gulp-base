@@ -56,6 +56,7 @@ $phone = "8 (962) 520-63-78";
                         document.fonts.load("700 1em MuseoSansCyrl"),
                         document.fonts.load("900 1em MuseoSansCyrl")
                     ]).then(function () {
+                        
                         document.documentElement.className += " webfont-loaded-2";
 
                         // Optimization for Repeat Views
