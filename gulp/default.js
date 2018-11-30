@@ -9,6 +9,7 @@ gulp.task('default', function() {
             'sass:watch',
             'js:watch',
             'fonts:watch',
+            'asyncFonts:watch',
             'img:watch',
             'libs:watch',
             'svg:watch'

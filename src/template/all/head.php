@@ -28,12 +28,19 @@ $phone = "8 (962) 520-63-78";
 
     <link rel="shortcut icon" href="/img/favicon/favicon.ico" type="image/x-icon">
 
+<<<<<<< HEAD
     <link rel="preload" href="/font/MuseoSansCyrl100/MuseoSansCyrl100.woff">
     <link rel="preload" href="/font/MuseoSansCyrl300/MuseoSansCyrl300.woff">
     <link rel="preload" href="/font/MuseoSansCyrl500/MuseoSansCyrl500.woff">
     <link rel="preload" href="/font/MuseoSansCyrl700/MuseoSansCyrl700.woff">
     <link rel="preload" href="/font/MuseoSansCyrl900/MuseoSansCyrl900.woff">
 
+=======
+    <script src="/js/async-font.js"></script>
+    <script>
+        loadFont('Muller', '/css/main.css');
+    </script>
+>>>>>>> e33346ffbfd526ab6fe08dc5d56d19436e809ee5
     <link rel="stylesheet" href="/css/libs.min.css">
     <link rel="stylesheet" href="/css/main.css">
 
