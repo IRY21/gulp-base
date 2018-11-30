@@ -1,4 +1,5 @@
 /*//=require libs/example.js*/
+/*//=require ../../node_modules/fontfaceobserver/fontfaceobserver.js*/
 
 //=require ../../node_modules/jquery/dist/jquery.min.js
 //=require ../libs/fancybox/dist/js/jquery.fancybox.pack.js

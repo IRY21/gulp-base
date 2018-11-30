@@ -9,7 +9,6 @@ gulp.task('build', function() {
         'js',
         'img',
         'fonts',
-        'asyncFonts',
         'libs',
         'svg'
     );

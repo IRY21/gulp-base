@@ -28,11 +28,42 @@ $phone = "8 (962) 520-63-78";
 
     <link rel="shortcut icon" href="/img/favicon/favicon.ico" type="image/x-icon">
 
-    <script src="/js/async-font.js"></script>
-    <script>
-        loadFont('Muller', '/css/main.css');
-    </script>
+    <link rel="preload" href="/font/MuseoSansCyrl100/MuseoSansCyrl100.woff">
+    <link rel="preload" href="/font/MuseoSansCyrl300/MuseoSansCyrl300.woff">
+    <link rel="preload" href="/font/MuseoSansCyrl500/MuseoSansCyrl500.woff">
+    <link rel="preload" href="/font/MuseoSansCyrl700/MuseoSansCyrl700.woff">
+    <link rel="preload" href="/font/MuseoSansCyrl900/MuseoSansCyrl900.woff">
+
     <link rel="stylesheet" href="/css/libs.min.css">
     <link rel="stylesheet" href="/css/main.css">
+
+    <script>
+        (function() {
+            if( "fonts" in document ) {
+                // Optimization for Repeat Views
+                if( sessionStorage.fontsLoadedCriticalFoftDataUri ) {
+                    // only stage 2 needed here, the subset isn’t needed anymore
+                    document.documentElement.className += " webfont-loaded-2";
+                    return;
+                }
+
+                document.fonts.load("300 1em MuseoSansCyrl").then(function () {
+                    document.documentElement.className += " webfont-loaded-1";
+
+                    Promise.all([
+                        document.fonts.load("100 1em MuseoSansCyrl"),
+                        document.fonts.load("500 1em MuseoSansCyrl"),
+                        document.fonts.load("700 1em MuseoSansCyrl"),
+                        document.fonts.load("900 1em MuseoSansCyrl")
+                    ]).then(function () {
+                        document.documentElement.className += " webfont-loaded-2";
+
+                        // Optimization for Repeat Views
+                        sessionStorage.fontsLoadedCriticalFoftDataUri = true;
+                    });
+                });
+            }
+        })();
+    </script>
 </head>
 <body>

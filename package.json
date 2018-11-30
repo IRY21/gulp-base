@@ -12,7 +12,6 @@
       "html": "src/",
       "js": "src/js/main.js",
       "fonts": "src/font/**/*.*",
-      "asyncFonts": "src/js/async-font.js",
       "img": {
         "compress": [
           "src/img/**/*.*",
@@ -48,6 +47,7 @@
     "browser-sync": "^2.23.7",
     "del": "^3.0.0",
     "fancybox": "^3.0.1",
+    "fontfaceobserver": "^2.0.13",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-babel": "^7.0.1",

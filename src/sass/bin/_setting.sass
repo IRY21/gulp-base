@@ -2,10 +2,24 @@
 @import "bourbon"
 @import "vars"
 
++font-face("MuseoSansCyrl", "/font/MuseoSansCyrl100/MuseoSansCyrl100", 100, $file-formats: woff)
++font-face("MuseoSansCyrl", "/font/MuseoSansCyrl300/MuseoSansCyrl300", 300, $file-formats: woff)
++font-face("MuseoSansCyrl", "/font/MuseoSansCyrl500/MuseoSansCyrl500", 500, $file-formats: woff)
++font-face("MuseoSansCyrl", "/font/MuseoSansCyrl700/MuseoSansCyrl700", 700, $file-formats: woff)
++font-face("MuseoSansCyrl", "/font/MuseoSansCyrl900/MuseoSansCyrl900", 900, $file-formats: woff)
+
 body
   margin: 0
   padding: 0
   font-family: $font-default
+
+.webfont-loaded-1 body
+  font-family: $webfont-default
+  line-height: 1.15
+
+.webfont-loaded-2 body
+  font-family: $webfont-default
+  line-height: 1.15
 
 .Container
   width: 100%
