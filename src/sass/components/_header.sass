@@ -1,14 +1,15 @@
 .Header
   width: 100%
-  padding: 11px 0 9px
+  padding: 11px 0
   background-color: #ffffff
-  +r(xs)
-    padding: 11px 0
-    position: fixed
-    z-index: 10
+  position: fixed
+  z-index: 10
+  +mf(xs)
+    padding: 0
+    position: relative
   .Container
-    +r(xs)
-      padding: 0
+    +mf(xs)
+      padding: 11px 0 9px
   &-Body
     display: flex
     align-items: center
@@ -20,35 +21,42 @@
   flex-direction: column
   &-Phone
   &-Text
-    +r(xs)
-      display: none
+    display: none
+    +mf(xs)
+      display: initial
 
 .HeaderPhone
-  color: #000
-  text-decoration: none
-  box-sizing: border-box
-  +r(xs)
-    width: 49px
-    height: 45px
-    padding: 16px 14px
-    background: $main-color
-    border-radius: 10px 0 0 10px
-    display: flex
-    align-items: center
-    justify-content: center
+  width: 49px
+  height: 45px
+  padding: 16px 14px
+  background: $main-color
+  border-radius: 10px 0 0 10px
+  display: flex
+  align-items: center
+  justify-content: center
+  +mf(xs)
+    width: initial
+    height: initial
+    padding: initial
+    color: #000
+    background: initial
+    border: none
+    text-decoration: none
+    display: initial
   &-Number
-    font-size: 22px
-    font-weight: 300
-    +r(xs)
-      display: none
-  &-Img
     display: none
-    +r(xs)
-      width: 26px
-      display: block
+    +mf(xs)
+      font-size: 22px
+      font-weight: 300
+      display: initial
+  &-Img
+    width: 26px
+    display: block
+    +mf(xs)
+      display: none
 
 .DefmenuBtn
-  display: none
-  +r(xs)
-    display: flex
+  display: flex
+  +mf(xs)
+    display: none
 

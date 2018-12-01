@@ -1,10 +1,11 @@
 .ImCallback
-  width: 320px
-  padding: 30px 20px 20px
-  +r(xs)
-    width: auto
-    max-width: 320px
-    padding: 20px 10px
+  width: auto
+  max-width: 320px
+  padding: 20px 10px
+  +mf(xs)
+    width: 320px
+    max-width: none
+    padding: 30px 20px 20px
   &-Title
     margin-bottom: 5px
     font-size: 18px
@@ -22,6 +23,8 @@
     margin-bottom: 10px
   &-Btn
     width: 100%
-    +r(xs)
-      padding-left: 10px
-      padding-right: 10px
+    padding-left: 10px
+    padding-right: 10px
+    +mf(xs)
+      padding-left: inherit
+      padding-right: inherit

@@ -1,12 +1,12 @@
 .Phone
   &-Only
-    display: none !important
-    +r(xs)
-      display: inherit !important
-  &-Hidden
     display: inherit !important
-    +r(xs)
+    +mf(xs)
       display: none !important
+  &-Hidden
+    display: none !important
+    +mf(xs)
+      display: inherit !important
 
 @import "../../common.blocks/Btn/Btn.sass"
 @import "../../common.blocks/Btn/_disable/Btn_disable.sass"
