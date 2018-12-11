@@ -124,3 +124,5 @@
         @@include('template/all/footer.php')
     </div>
 </main>
+
+@@include('template/all/bot-script.php')
