@@ -36,32 +36,32 @@ $phone = "8 (800) 222-22-22";
 <main class="Home DefmenuWrapper">
     <div class="DefmenuContainer">
         <div class="DefmenuOverlay"></div>
-        
-<header class="Header DefmenuBtn-Container_fixed">
 
-        <div class="Header-Body">
+        <header class="Header DefmenuBtn-Container_fixed">
 
-            <button class="DefmenuBtn">
-                <span class="DefmenuBtn-Line"></span>
-                <span class="DefmenuBtn-Line"></span>
-                <span class="DefmenuBtn-Line"></span>
-            </button>
+            <div class="Header-Body">
 
-            <a href="/" class="Header-Logo Logo">
-                <img class="Logo-Image" src="/img/logo.svg" alt="">
-            </a>
+                <button class="DefmenuBtn">
+                    <span class="DefmenuBtn-Line"></span>
+                    <span class="DefmenuBtn-Line"></span>
+                    <span class="DefmenuBtn-Line"></span>
+                </button>
 
-            <div class="Header-Info HeaderInfo">
-                <a href="tel:<?=preg_replace("/[^0-9]/", '', $phone);?>" class="HeaderInfo-Phone HeaderPhone">
-                    <span class="HeaderPhone-Number"><?=$phone?></span>
-                    <img src="/img/HeaderPhone-Img.svg" alt="" class="HeaderPhone-Img">
+                <a href="/" class="Header-Logo Logo">
+                    <img class="Logo-Image" src="/img/logo.svg" alt="">
                 </a>
-                <p class="HeaderInfo-Text">звонок по России бесплатный</p>
+
+                <div class="Header-Info HeaderInfo">
+                    <a href="tel:<?=preg_replace("/[^0-9]/", '', $phone);?>" class="HeaderInfo-Phone HeaderPhone">
+                        <span class="HeaderPhone-Number"><?=$phone?></span>
+                        <img src="/img/HeaderPhone-Img.svg" alt="" class="HeaderPhone-Img">
+                    </a>
+                    <p class="HeaderInfo-Text">звонок по России бесплатный</p>
+                </div>
+
             </div>
 
-        </div>
-
-</header>
+        </header>
 
 
         <div class='ProcessingPersonalDataText'>
@@ -126,7 +126,18 @@ $phone = "8 (800) 222-22-22";
             </div>
         </form>-->
 
-        <button class="Btn FancyBtn fancybox.ajax"  href="/im-blocks/imassage.php?headmess=<?=urlencode("Главная форма");?>&zag1=<?=urlencode("Заявка на консультацию менеджера");?>&zag2=<?=urlencode("Перезвоним в течение 5 минут");?>&reachgoal=main_form&btn_text=<?=urlencode('Получить консультацию');?>&page_id=<?=urlencode($page_id);?>">
+        <svg class="icon icon--twitter" style="width: 100px; fill: red;">
+            <use
+                    xlink:href="img/sprite.svg#flask"
+                    href="img/sprite.svg#flask"></use>
+        </svg>
+
+        <button
+                class="Btn FancyBtn"
+                data-fancybox
+                data-type="ajax"
+                data-src="/im-blocks/imassage.php?headmess=<?=urlencode("Главная форма");?>&zag1=<?=urlencode("Заявка на консультацию менеджера");?>&zag2=<?=urlencode("Перезвоним в течение 5 минут");?>&reachgoal=main_form&btn_text=<?=urlencode('Получить консультацию');?>&page_id=<?=urlencode($page_id);?>"
+                href="javascript:;">
 
         </button>
 
@@ -173,34 +184,34 @@ $phone = "8 (800) 222-22-22";
         <form class="Form" id="form1" data-reachgoal="main-form">
             <div class="Form-Row">
                 <input
-                    name="name"
-                    class="Input"
-                    data-validator="letters"
+                        name="name"
+                        class="Input"
+                        data-validator="letters"
                 />
             </div>
             <div class="Form-Row">
                 <input
-                    name="name"
-                    class="Input"
-                    data-required
+                        name="name"
+                        class="Input"
+                        data-required
                 />
             </div>
             <div class="Form-Row">
                 <input
-                    type="tel"
-                    name="phone"
-                    class="Input masked-phone"
-                    placeholder="+7 (___) ___-__-__"
-                    data-validator="regexp"
-                    data-validator-pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                        type="tel"
+                        name="phone"
+                        class="Input masked-phone"
+                        placeholder="+7 (___) ___-__-__"
+                        data-validator="regexp"
+                        data-validator-pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
                 />
             </div>
             <div class="Form-Row">
                 <textarea
-                    class="FormSection-Textarea"
-                    name="appeal-text"
-                    data-validator="empty"
-                    data-required
+                        class="FormSection-Textarea"
+                        name="appeal-text"
+                        data-validator="empty"
+                        data-required
                 ></textarea>
             </div>
             <div class="Form-Row">
@@ -230,19 +241,19 @@ $phone = "8 (800) 222-22-22";
                     <label class="Input Input_theme_line ContactForm-Input">
                         <span class="Label ContactForm-Label">Имя:</span>
                         <input
-                            placeholder="Введите ваше имя"
-                            name="name"
-                            class="Input-Control ContactForm-InputControl"
-                            data-validator="number"
+                                placeholder="Введите ваше имя"
+                                name="name"
+                                class="Input-Control ContactForm-InputControl"
+                                data-validator="number"
                         />
                     </label>
                     <label class="Input Input_theme_line ContactForm-Input">
                         <span class="Label ContactForm-Label">Имя:</span>
                         <input
-                            placeholder="Введите ваше имя"
-                            name="name"
-                            class="Input-Control ContactForm-InputControl"
-                            data-validator="letters"
+                                placeholder="Введите ваше имя"
+                                name="name"
+                                class="Input-Control ContactForm-InputControl"
+                                data-validator="letters"
                         />
                     </label>
                 </div>
@@ -250,13 +261,13 @@ $phone = "8 (800) 222-22-22";
                     <label class="Input Input_theme_line ContactForm-Input">
                         <span class="Label ContactForm-Label">Телефон:</span>
                         <input
-                            type="tel"
-                            name="phone"
-                            class="Input-Control ContactForm-InputControl MaskedPhone"
-                            placeholder="+7 (___) ___-__-__"
-                            data-validator="regexp"
-                            data-validator-pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
-                            data-required
+                                type="tel"
+                                name="phone"
+                                class="Input-Control ContactForm-InputControl MaskedPhone"
+                                placeholder="+7 (___) ___-__-__"
+                                data-validator="regexp"
+                                data-validator-pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                                data-required
                         />
                     </label>
                 </div>
@@ -277,10 +288,10 @@ $phone = "8 (800) 222-22-22";
                 </div>
                 <input name="head_mess" type="hidden" value="Вопрос">
                 <input
-                    name="intibot"
-                    type="hidden"
-                    value=""
-                    data-validator="intibot"
+                        name="intibot"
+                        type="hidden"
+                        value=""
+                        data-validator="intibot"
                 />
             </div>
             <div class="Form-Thx FormThx" style="display: block;">
@@ -321,17 +332,17 @@ $phone = "8 (800) 222-22-22";
             </div>
         </div>
 
-        
-    <footer class="Footer">
-        <div class="Container">
-            <div class="Footer-Body">
-                <a href="/im-blocks/politic.php" class="Footer-Politic ImPolitic fancybox.ajax">Политика конфиденциальности</a>
-                <a class="Footer-FijiLogo" href="http://fijiweb.ru/?utm_source=clientsite&utm_term=<?=$_SERVER['SERVER_NAME'];?>" target="_blank">
-                    <img src="/img/LogoFiji.svg" alt="Создание сайтов Фидживеб" title="Создание сайтов Фидживеб">
-                </a>
+
+        <footer class="Footer">
+            <div class="Container">
+                <div class="Footer-Body">
+                    <a href="/im-blocks/politic.php" class="Footer-Politic ImPolitic fancybox.ajax">Политика конфиденциальности</a>
+                    <a class="Footer-FijiLogo" href="http://fijiweb.ru/?utm_source=clientsite&utm_term=<?=$_SERVER['SERVER_NAME'];?>" target="_blank">
+                        <img src="/img/LogoFiji.svg" alt="Создание сайтов Фидживеб" title="Создание сайтов Фидживеб">
+                    </a>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
 
     </div>

@@ -4,6 +4,14 @@
         <div class="DefmenuOverlay"></div>
         @@include('template/all/header.php')
 
+
+        <a class="Btn FancyBtn"
+           data-fancybox
+           data-type="ajax"
+           data-src="/im-blocks/imassage.php?headmess=<?=urlencode("Главная форма");?>&zag1=<?=urlencode("Заявка на консультацию менеджера");?>&zag2=<?=urlencode("Перезвоним в течение 5 минут");?>&reachgoal=main_form&btn_text=<?=urlencode('Получить консультацию');?>&page_id=<?=urlencode($page_id);?>"
+           href="javascript:;">
+            Тест
+        </a>
         <svg class="icon icon--twitter" style="width: 100px; fill: red;">
             <use
                     xlink:href="img/sprite.svg#lunch"
@@ -125,4 +133,4 @@
     </div>
 </main>
 
-@@include('template/all/bot-script.php')
+@@include('template/all/bot-scripts.php')

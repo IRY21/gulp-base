@@ -72,5 +72,7 @@
     "run-sequence": "^2.2.1",
     "slick-carousel": "^1.8.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.6"
+  }
 }

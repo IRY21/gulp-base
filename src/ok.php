@@ -92,7 +92,7 @@ if(count($_POST))
 		
 	
 	if( $curl = curl_init() ) {
-		curl_setopt($curl, CURLOPT_URL, 'http://leads.excellgroup.ru/inboxer');
+		curl_setopt($curl, CURLOPT_URL, 'http://leads.denlam.ru/inboxer');
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER,true);
 		curl_setopt($curl, CURLOPT_POST, true);
 		curl_setopt($curl, CURLOPT_POSTFIELDS, $mesmessage);
