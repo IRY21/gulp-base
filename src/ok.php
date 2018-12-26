@@ -43,6 +43,27 @@ function send_sms($phone, $text)
 
 if(count($_POST))
 {
+
+    $uploadfilename = '';  // Создаем переменную
+    if($_FILES)
+    {
+        if($_FILES["file"]["size"] < 1024*100*1024) // Размер файла не превышает сто мегабайт
+        {
+            // Проверяем загружен ли файл
+            if(is_uploaded_file($_FILES["file"]["tmp_name"]))
+            {
+                $ext = substr($_FILES['file']['name'], 1 + strrpos($_FILES['file']['name'], ".")); // Расширение файла
+                if($ext=='php')
+                    exit();
+                $uploadfilename = time()."_".rand(10000, 99999).".".$ext;
+                // Если файл загружен успешно, перемещаем его
+                // из временной директории в конечную
+                move_uploaded_file($_FILES["file"]["tmp_name"], "file/".$uploadfilename);
+            } else {
+                echo("Ошибка загрузки файла");
+            }
+        }
+    }
 	
 	$ab_test = intval($_SESSION['ab_var1']);
 	$head_mess = addslashes(htmlspecialchars(trim($_POST['head_mess'])));
@@ -55,15 +76,18 @@ if(count($_POST))
 	$utm_campaign = addslashes(trim(strip_tags($_SESSION['utm_campaign'])));
 	$utm_term = addslashes(trim(strip_tags($_SESSION['utm_term'])));
 	$utm_content = addslashes(trim(strip_tags($_SESSION['utm_content'])));
-	
-	
-	if($head_mess=='Калькулятор')
+
+    if(!empty($price))
+        $body_form = "<b>Utm_source: </b>".$utm_source."<b>utm_term: </b>".$utm_term."<b>Форма: </b>".$head_mess."<br><b>Имя: </b> ".$name." <br><b>Телефон</b>: ".$phone." <br><b>Цена</b>: ".$price;
+    else if($head_mess=='Отзыв')
+        $body_form = "<b>Utm_source: </b>".$utm_source."<b>utm_term: </b>".$utm_term."<b>Форма: </b>".$head_mess."<br><b>Имя: </b> ".$name." <br><b>Телефон</b>: ".$phone." <br><b>Отзыв</b>: ".$feedback." <br>Файл: http://".$_SERVER['SERVER_NAME']."/file/".$uploadfilename;
+    else if($head_mess=='Калькулятор')
+        $body_form = "<b>Utm_source: </b>".$utm_source."<b>utm_term: </b>".$utm_term."<b>Форма: </b>".$head_mess." <br><b>Телефон</b>: ".$phone." <br><b>Количество решеток</b>: ".$count." <br><b>Название города или населенного пункта</b>: ".$city." <br><b>Как вы желаете получить расчет?</b>: ".$calcCallback." <br><b>Дополнительные опции</b>: ".$optionSetup.",".$optionColor;
+    else
         $body_form = "<b>Utm_source: </b>".$utm_source."<b>utm_term: </b>".$utm_term."<b>Форма: </b>".$head_mess."<br><b>Имя: </b> ".$name." <br><b>Телефон</b>: ".$phone;
-	else
-        $body_form = "<b>Utm_source: </b>".$utm_source."<b>utm_term: </b>".$utm_term."<b>Форма: </b>".$head_mess."<br><b>Имя: </b> ".$name." <br><b>Телефон</b>: ".$phone;
-	
-	
-	/* отправка на почту */
+
+
+    /* отправка на почту */
 	mail_send("", "noreply@".$_SERVER['SERVER_NAME'], "Администратор","","utf-8","utf-8", "Новая заявка с сайта ".date("d.m.Y"),$body_form);
 	
 	
