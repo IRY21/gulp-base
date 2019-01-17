@@ -18,7 +18,16 @@ function sendForm(form) {
         } else {
             //yaCounter33093903.reachGoal(reachgoal);
             parent.$.fancybox.close();
-            jQuery.fancybox( jQuery('.ImThanks').html(xhr.responseText) );
+            jQuery.fancybox.open( jQuery('.ImThanks').html(xhr.responseText), {
+                maxWidth : 1140,
+                padding: 0,
+                btnTpl : {
+                    smallBtn : '<div class="ImCallback-CloseBtn" onclick="$.fancybox.close();">' +
+                    '<img src="/img/ImCallback-CloseBtn.png" alt="" class="ImCallback-CloseBtn-Icon">' +
+                    '</div>'
+                }
+            });
+            //jQuery.fancybox( jQuery('.ImThanks').html(xhr.responseText) );
 
             formBtn.classList.remove('Btn_disabled');
             formBtn.disabled = false;

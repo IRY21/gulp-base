@@ -133,7 +133,7 @@ if(count($_POST))
     <div class=\"ImThanks-Subtitle\">
         Ваше сообщение было отправлено успешно.
     </div>
-    <button type=\"button\" class=\"ImThanks-Btn Btn\" id=\"fancyClose\" onclick=\"location.href='/'\">Закрыть</button>
+    <button type=\"button\" class=\"ImThanks-Btn Btn\" id=\"fancyClose\" onclick=\"$.fancybox.close()\">Закрыть</button>
 	";
 
     exit();
