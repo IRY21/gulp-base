@@ -22,6 +22,7 @@ function sendForm(form) {
 
             formBtn.classList.remove('Btn_disabled');
             formBtn.disabled = false;
+            clearForms();
         }
 
     };
