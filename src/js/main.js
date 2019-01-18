@@ -81,5 +81,9 @@ $(document).ready(function(){
         //formInvalidClass: 'Form_invalid',
         //inputErrorClass: 'Input_error'
     });
+
+    var center = [54.728243, 55.955951];
+    var iconCoord = [54.728243, 55.955951];
+    mapInit(center, iconCoord);
 });
 

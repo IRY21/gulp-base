@@ -3,7 +3,7 @@ function sendForm(form) {
 
     var formData = new FormData(form);
 
-    var formBtn = form.querySelector('.Btn');
+    var formBtn = form.querySelector('button.Btn');
     formBtn.classList.add('Btn_disabled');
     formBtn.disabled = true;
 
