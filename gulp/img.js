@@ -8,7 +8,7 @@ gulp.task('img', function () {
      gulp.src(cnf.src.img.noCompress)
         .pipe(gulp.dest(cnf.dist.img));
      gulp.src(cnf.src.img.compress)
-         .pipe(imagemin([
+         /*.pipe(imagemin([
              imagemin.gifsicle({interlaced: true}),
              imagemin.jpegtran({progressive: true}),
              imagemin.optipng({optimizationLevel: 5}),
@@ -18,7 +18,7 @@ gulp.task('img', function () {
                      {cleanupIDs: false}
                  ]
              })
-         ]))
+         ]))*/
         .pipe(gulp.dest(cnf.dist.img));
 });
 

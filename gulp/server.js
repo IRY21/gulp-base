@@ -3,7 +3,7 @@ var gulp                        = require('gulp');
 
 gulp.task('server', function() {
     browserSync.init({
-        proxy: "0000gitGulpBase.my",
+        proxy: "55energo-new.dev",
         notify: false
         /*server: {
             baseDir: "dist/"

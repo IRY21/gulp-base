@@ -8,8 +8,8 @@
   },
   "config": {
     "src": {
-      "sass": "src/sass/main.sass",
-      "html": "src/",
+      "sass": "src/sass/pages/*.sass",
+      "html": "src/pages/",
       "js": "src/js/main.js",
       "fonts": "src/font/**/*.*",
       "img": {
@@ -20,7 +20,8 @@
         ],
         "noCompress": "src/img/noCompress/**/*.*",
         "svg": "src/img/svg/**/*.svg"
-      }
+      },
+      "template": "src/template/**/*.php"
     },
     "dist": {
       "css": "dist/css",
@@ -28,7 +29,8 @@
       "js": "dist/js",
       "fonts": "dist/font",
       "libs": "dist/libs",
-      "img": "dist/img"
+      "img": "dist/img",
+      "template": "dist/template"
     },
     "libs": {
       "js": "src/js/libs.js",

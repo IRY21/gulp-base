@@ -11,7 +11,8 @@ gulp.task('default', function() {
             'fonts:watch',
             'img:watch',
             'libs:watch',
-            'svg:watch'
+            'svg:watch',
+            'template:watch'
         ],
         'server'
     );
