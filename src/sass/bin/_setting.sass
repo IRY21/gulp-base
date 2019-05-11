@@ -8,10 +8,32 @@
 +font-face("MuseoSansCyrl", "/font/MuseoSansCyrl700/MuseoSansCyrl700", 700, $file-formats: woff)
 +font-face("MuseoSansCyrl", "/font/MuseoSansCyrl900/MuseoSansCyrl900", 900, $file-formats: woff)
 
+
+*
+  outline: none
+
+a, p, h1, sup, span
+  color: inherit
+  font-weight: inherit
+
+sup
+  font-size: 60%
+
+b
+  font-weight: 600
+
+svg
+  fill: currentColor
+
 body
   margin: 0
   padding: 0
   font-family: $font-default
+  font-size: 14px
+  font-weight: 400
+  color: #000
+  +mf(sl)
+    font-size: 16px
 
 .fonts-stage-1 body
   font-family: $webfont-default
@@ -30,3 +52,9 @@ body
   margin-left: auto
   box-sizing: border-box
 
+
+.fancybox-container
+  z-index: 9000
+
+.fancybox-content
+  padding: 0

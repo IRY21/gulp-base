@@ -1,6 +1,6 @@
 /*//=require components/example.js*/
 
-//=require components/**.*
+//=require ../components/**.*
 
 
 $(document).ready(function(){

@@ -8,9 +8,9 @@
   },
   "config": {
     "src": {
-      "sass": "src/sass/pages/*.sass",
+      "sass": "src/sass/render/*.sass",
       "html": "src/pages/",
-      "js": "src/js/main.js",
+      "js": "src/js/render/*.js",
       "fonts": "src/font/**/*.*",
       "img": {
         "compress": [
