@@ -12,10 +12,11 @@ function validateForm(options) {
     var form = document.getElementById(options.formId);
 
     if(!form) {
-        console.error("Cannot find form with id: "+ options.formId);
+        console.log("Cannot find form with id: "+ options.formId);
         return;
     }
 
+    var funcHandler = options.funcHandler || sendForm;
     var formValidClass = options.formValidClass || 'Form_valid';
     var formInvalidClass = options.formInvalidClass || 'Form_invalid';
     var inputErrorClass = options.inputErrorClass || 'Input_error';
@@ -148,6 +149,6 @@ function validateForm(options) {
 
     form.addEventListener('submit', function (event) {
         event.preventDefault();
-        if (checkForm()) sendForm(form);
+        if (checkForm()) funcHandler(form);
     });
 }

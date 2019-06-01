@@ -3,7 +3,7 @@
     <div class="DefmenuContainer">
         <div class="DefmenuOverlay"></div>
 
-        <? include ("template/all/header.php")?>
+        <? include ("template/all/Header.php")?>
 
 
         <a class="Btn FancyBtn"
@@ -51,7 +51,7 @@
             repellendus.
         </div>
 
-        <? include ("template/all/footer.php")?>
+        <? include ("template/all/Footer.php")?>
     </div>
 </main>
 

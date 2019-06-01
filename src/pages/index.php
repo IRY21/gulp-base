@@ -1,5 +1,18 @@
 <?
-$phone = "8 (800) 1000-44-0";
+session_start();
+
+if(!empty($_GET['utm_source']))
+    $_SESSION['utm_source'] = $_GET['utm_source'];
+if(!empty($_GET['utm_medium']))
+    $_SESSION['utm_medium'] = $_GET['utm_medium'];
+if(!empty($_GET['utm_campaign']))
+    $_SESSION['utm_campaign'] = $_GET['utm_campaign'];
+if(!empty($_GET['utm_term']))
+    $_SESSION['utm_term'] = $_GET['utm_term'];
+if(!empty($_GET['utm_content']))
+    $_SESSION['utm_content'] = $_GET['utm_content'];
+
+$phone = "8 (962) 520-63-78";
 ?>
 <!doctype html>
 <html lang="ru">
@@ -34,13 +47,19 @@ $phone = "8 (800) 1000-44-0";
     contact - Контакты
 
 -->
-<body class="PageIndex"> <!--Defmenu_open-->
+<body> <!--Defmenu_open-->
 
 <main class="Home">
 
     <? include ("template/all/Header.php")?>
 
-    <? include ("template/index/Intro.php")?>
+    <a class="Btn FancyBtn Btn_disable"
+       data-fancybox
+       data-type="ajax"
+       data-src="/im-blocks/imassage.php?headmess=<?=urlencode("Главная форма");?>&zag1=<?=urlencode("Заявка на консультацию менеджера");?>&zag2=<?=urlencode("Перезвоним в течение 5 минут");?>&reachgoal=main_form&btn_text=<?=urlencode('Получить консультацию');?>&page_id=<?=urlencode($page_id);?>"
+       href="javascript:;">
+        Узнать подробнее
+    </a>
 
     <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consequuntur culpa id minima mollitia
         quisquam quod sequi veritatis! Ad aliquam animi aut debitis, facilis harum minima neque reiciendis vitae
@@ -56,7 +75,7 @@ $phone = "8 (800) 1000-44-0";
         Adipisci deleniti deserunt quos sequi vitae. Delectus eveniet, laudantium necessitatibus possimus
         praesentium reprehenderit repudiandae?
     </div>
-    <? include ("template/all/footer.php")?>
+    <? include ("template/all/Footer.php")?>
 </main>
 
 <? include ("template/all/bot-scripts.php")?>
