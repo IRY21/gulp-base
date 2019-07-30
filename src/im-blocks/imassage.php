@@ -1,5 +1,5 @@
 <div>
-    <script type="text/javascript" src="../js/render/im-js.js"></script>
+    <script type="text/javascript" src="../js/im-js.js"></script>
     <div class="ImCallback">
         <p class="ImCallback-Title"><?=$_GET['zag1'];?></p>
         <p class="ImCallback-Subtitle"><?=$_GET['zag2'];?></p>
@@ -38,7 +38,12 @@
         </form>
         <div class='ImCallback-ProcessingPersonalDataText ProcessingPersonalDataText'>
             Заполняя эту форму, вы даете согласие на<br>
-            <a href="/im-blocks/politic.php" class="ProcessingPersonalDataText-Link fancybox.ajax">
+            <a
+                    data-fancybox
+                    data-type="ajax"
+                    data-src="/im-blocks/politic.php"
+                    href="javascript:;"
+                    class="ProcessingPersonalDataText-Link fancybox.ajax">
                 обработку ваших персональных данных
             </a>
         </div>

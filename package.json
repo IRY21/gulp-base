@@ -9,7 +9,7 @@
   "config": {
     "src": {
       "sass": "src/sass/render/*.sass",
-      "html": "src/pages/",
+      "html": "src/render/",
       "js": "src/js/render/*.js",
       "fonts": "src/font/**/*.*",
       "img": {
